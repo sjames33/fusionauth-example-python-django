@@ -121,10 +121,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Edit the following to add your own keys and data.
-FUSION_AUTH_APP_ID = "b89aeba4-d406-4482-acda-ee4ec00a1881"
-FUSION_AUTH_CLIENT_SECRET = "0E_nAcnm5MmBhXH7S55n5qJ_UPWV7esxi5bjmHMTaxo"
-FUSION_AUTH_API_KEY = "n6z-UA9UR_8RfXF0p5kWI5doOqYZiXUaG2MwenCBFDY"
+FUSION_AUTH_APP_ID = "4038b823-e35d-47b5-81b3-1d030ab88821"
+FUSION_AUTH_CLIENT_SECRET = "c7FMckayado60wNhMrb1SRXqD8tPhIJV6-tNA97_18M"
+FUSION_AUTH_API_KEY = "htncIDa2GwOrDF_NP-JhQf4tLH_ssNmFhyxaGlGIg3t-jxhizVBfVywK"
 FUSION_AUTH_BASE_URL = "http://localhost:9011"
-
 
 

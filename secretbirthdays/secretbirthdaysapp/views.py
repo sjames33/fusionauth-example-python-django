@@ -13,6 +13,8 @@ def get_or_create_user(user_id, request):
     if not user:
         user = User(username=user_id)
         user.save()
+    # request.user = user
+    # request.session['user_id'] = user_id
     return user
 
 
@@ -45,7 +47,8 @@ def is_user_login_ok(request):
             code,
             redirect_url,
             request.session['pkce_verifier'],
-            settings.CLIENT_ID,
+            # settings.CLIENT_ID,
+            settings.FUSION_AUTH_APP_ID,
             settings.FUSION_AUTH_CLIENT_SECRET,
         )
 
