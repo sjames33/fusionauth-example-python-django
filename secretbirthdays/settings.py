@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from dotenv import load_dotenv, find_dotenv
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -120,10 +122,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Load environment definition file
+
+ENV_FILE = find_dotenv()
+if ENV_FILE:
+    load_dotenv(ENV_FILE)
+
 # Edit the following to add your own keys and data.
-FUSION_AUTH_APP_ID = "4038b823-e35d-47b5-81b3-1d030ab88821"
-FUSION_AUTH_CLIENT_SECRET = "c7FMckayado60wNhMrb1SRXqD8tPhIJV6-tNA97_18M"
-FUSION_AUTH_API_KEY = "htncIDa2GwOrDF_NP-JhQf4tLH_ssNmFhyxaGlGIg3t-jxhizVBfVywK"
-FUSION_AUTH_BASE_URL = "http://localhost:9011"
 
-
+FUSION_AUTH_APP_ID = os.environ.get("FUSION_AUTH_APP_ID")
+FUSION_AUTH_CLIENT_SECRET = os.environ.get("FUSION_AUTH_CLIENT_SECRET")
+FUSION_AUTH_API_KEY = os.environ.get("FUSION_AUTH_API_KEY")
+FUSION_AUTH_BASE_URL = os.environ.get("FUSION_AUTH_BASE_URL")

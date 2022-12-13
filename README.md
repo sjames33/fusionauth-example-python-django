@@ -16,6 +16,7 @@ You need to make sure FusionAuth is running and that you have python3/pip3 avail
 *  `virtualenv sb-env`
 *  `source sb-env/bin/activate`
 *  `pip3 install django dateparser fusionauth-client pkce`
+*  `pip3 install python-dotenv`   (added by sjames)
 *  `django-admin startproject secretbirthdays`
 *  `cd secretbirthdays`
 *  `python3 manage.py startapp secretbirthdaysapp`
